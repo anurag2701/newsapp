@@ -5,18 +5,18 @@ export default class NewsItem extends Component {
     let { title, description, imgUrl, newsUrl, author, date, source } = this.props;
     return (
       <div className="my-3">
-        <div className="card text-center" style={{ width: "18rem" }}>
+        <div className="card text-center" style={{ width: "22rem" }}>
           <img
             src={imgUrl || "https://www.epss.ucla.edu/static/images/default-news.png"}
             className="card-img-top"
-            style={{ height: "175px" }}
+            style={{ height: "16rem" }}
           />
           <div className="card-body">
             <h5 className="card-title">
               {title}{" "}
-              <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-warning">
+              <span className="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-warning">
                 {source}
-                <span class="visually-hidden">unread messages</span>
+                <span className="visually-hidden">unread messages</span>
               </span>
             </h5>
 
