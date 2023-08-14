@@ -22,7 +22,7 @@ export default class App extends Component {
     return (
       <BrowserRouter>
         <>
-          <LoadingBar  height={4} color={'#F7FF00'} shadow='true' progress={this.state.progress}  />
+          <LoadingBar background="#000000"  height={3} color={'red'} progress={this.state.progress}  />
           <Navbar />
           {/* <MyComponent /> */}
           <Routes>

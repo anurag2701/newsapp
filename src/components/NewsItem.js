@@ -1,14 +1,14 @@
-import React, { Component } from "react";
+import React from 'react'
 
-export default class NewsItem extends Component {
-  render() {
-    let { title, description, imgUrl, newsUrl, author, date, source } = this.props;
+const NewsItem = (props) => {
+    let { title, description, imgUrl, newsUrl, author, date, source } = props;
     return (
       <div className="my-3">
         <div className="card text-center" style={{ width: "22rem" }}>
           <img
             src={imgUrl || "https://www.epss.ucla.edu/static/images/default-news.png"}
             className="card-img-top"
+            alt=""
             style={{ height: "16rem" }}
           />
           <div className="card-body">
@@ -26,7 +26,7 @@ export default class NewsItem extends Component {
                 By {author ?? "Unknown"} on {new Date(date).toGMTString()}
               </small>
             </p>
-            <a href={newsUrl} target="_blank" className="btn btn-sm btn-primary">
+            <a href={newsUrl} target="_blank" rel="noreferrer" className="btn btn-sm btn-primary">
               Read More
             </a>
           </div>
@@ -34,7 +34,8 @@ export default class NewsItem extends Component {
       </div>
     );
   }
-}
+
+export default NewsItem
 
 NewsItem.defaultProps = {
   imgUrl: "https://www.epss.ucla.edu/static/images/default-news.png",

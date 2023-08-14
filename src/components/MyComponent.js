@@ -16,8 +16,19 @@ import axios from "axios";
     Notes:
       1. constructor is a part of JS. called before render()
       2. Update can have new page, new prop, forceUpdate()
-  */
 
+    React HOOKs
+      - Feature of RCC in RFC.
+      - allows to use readt feature w/o a class.
+      - Hooks are the functions which "hook into" React state and LC features from function components.
+
+    Commonly used react hooks
+      1. useState : 
+      2. useEffect : performs side effects when component updates
+      3. useContext : context API makes props available in the children components.
+      4. useRef : mutuable object. DOm element exists in .current. Useful to tag JSX
+
+*/
 const MyComponent = () => {
   const [data, setData] = useState([]);
   useEffect(() => {
